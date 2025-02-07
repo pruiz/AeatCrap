@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:siiLR="https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroLR.xsd"
+xmlns:sii="https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/ssii/fact/ws/SuministroInformacion.xsd">
+
+  <soapenv:Header />
+  <soapenv:Body>
+    <siiLR:SuministroLRFacturasEmitidas>
+      <sii:Cabecera>
+        <sii:IDVersionSii>1.1</sii:IDVersionSii>
+        <sii:Titular>
+          <sii:NombreRazon>Uanataca, S.A.U.</sii:NombreRazon>
+          <sii:NIF>A66721499</sii:NIF>
+        </sii:Titular>
+        <!-- 
+                A0: Alta facturas
+                A1: Modificación facturas
+        -->
+        <sii:TipoComunicacion>A0</sii:TipoComunicacion>
+      </sii:Cabecera>
+
+      {{INVOICES}}
+
+    </siiLR:SuministroLRFacturasEmitidas>
+  </soapenv:Body>
+</soapenv:Envelope>
+<!-- # vim: set ft=xml sts=2 ts=2 sw=2 et ai: -->
